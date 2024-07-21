@@ -31,21 +31,21 @@ export default class HolbertonCourse {
 
   static validateString(value, propertyName) {
     if (typeof value !== 'string') {
-    throw new TypeError(`${propertyName} Must be a string`);
+      throw new TypeError(`${propertyName} Must be a string`);
     }
     return value;
   }
 
   static validateNumber(value, propertyName) {
     if (typeof value !== 'number') {
-    throw new TypeError(`${propertyName} Must be a number`);
+      throw new TypeError(`${propertyName} Must be a number`);
     }
     return value;
   }
 
   static validateArray(value, propertyName) {
     if (!Array.isArray(value)) {
-    throw new TypeError(`${propertyName} Must be an array`);
+      throw new TypeError(`${propertyName} Must be an array`);
     }
     return value;
   }
