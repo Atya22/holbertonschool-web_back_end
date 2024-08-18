@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""Module for a function that returns an asyncio.Task.
-"""
+"""Module for function that returns asyncio.Task"""
 import asyncio
 wait_random = __import__('0-basic_async_syntax').wait_random
 
