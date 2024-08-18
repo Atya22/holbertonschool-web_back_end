@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Adding function with type annotations. """
-
+from typing import List
 
 def sum_list(input_list: List[float]) -> float:
     """
