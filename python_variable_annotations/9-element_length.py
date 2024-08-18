@@ -14,4 +14,3 @@ def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
         List[int]: The list of lengths of the elements in the list of strings.
     """
     return [len(element) for element in lst]
-
