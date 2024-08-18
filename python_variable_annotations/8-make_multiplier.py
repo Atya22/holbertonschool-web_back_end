@@ -11,7 +11,8 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
         multiplier (float): The float to multiply by.
 
     Returns:
-        Callable[[float], float]: A function that multiplies a float by a multiplier.
+        Callable[[float], float]: A function that multiplies a float
+        by a multiplier.
     """
     def multiply(n: float) -> float:
         return n * multiplier
