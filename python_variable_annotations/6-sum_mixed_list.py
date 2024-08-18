@@ -2,6 +2,7 @@
 """Adding function with type annotations. """
 from typing import List, Union
 
+
 def sum_mixed_list(mxd_lst: List[int, float]) -> float:
     """
     Returns the sum of a list of mixed floats and ints.
