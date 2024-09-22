@@ -15,11 +15,26 @@ const app = http.createServer((req, res) => {
     countStudents(DB).then((result) => {
       res.end(result.join('\n'));
     }).catch((error) => {
-      res.end(`${error.message}`);
+      res.statusCode = 500; // Internal Server Error
+      res.end('Cannot load the database');
     });
+  } else {
+    res.statusCode = 404; // Not Found
+    res.end('Not Found');
   }
 });
 
-app.listen(port, hostname);
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+app.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`Port ${port} is already in use`);
+    process.exit(1);
+  } else {
+    throw err;
+  }
+});
 
 module.exports = app;
