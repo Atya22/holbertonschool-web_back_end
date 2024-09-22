@@ -1,18 +1,24 @@
 {
-  "name": "node_js_basic",
+  "name": "node_js_basics",
   "version": "1.0.0",
   "description": "",
-  "main": "0-console.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require babel-register --exit 5-http.test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.3.2",
+    "glob": "^7.2.3",
+    "mkdirp": "^1.0.4",
+    "lodash": "^4.17.21",
+    "request": "^2.88.2",
+    "debug": "^4.3.1",
+    "superagent": "^9.0.0",
+    "sinon": "^16.1.1",
+    "core-js": "^3.23.3"
+  },
   "devDependencies": {
-    "@eslint/js": "^9.10.0",
-    "eslint": "^9.10.0",
-    "eslint-plugin-react": "^7.36.1",
-    "globals": "^15.9.0"
+    "mocha": "^10.0.0",
+    "babel-register": "^6.26.0"
   }
 }
